@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSA Yazılım </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.header {
+    background:#333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffe082;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../sayfa/resim2.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-icerik h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.hero-icerik p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.hero-icerik .btn {
+    padding: 1rem 2rem;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.hero-icerik .btn:hover {
+    background: #2a622c;
+}
+
+.hakkında, .hizmetlerr, .ekipp {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hakkında .icerik img {
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hizmetlerr .hizmet-kartlar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.hizmet-kart {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.hizmet-kart:hover {
+    transform: translateY(-10px);
+}
+
+.ekipp .resim img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 150px;
+    height: 150px;
+}
+
+.ekipp .ekip-resim {/*yan yana yazdırmayı sağlıyo*/
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.ekipp .resim img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/*FOOTER KISMI */
+footer {
+    background: linear-gradient(90deg, #1a237e, #283593);
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .footer-baglan {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+footer .footer-hakkında,
+footer .footer-link,
+footer .footer-sosyal {
+    flex: 1;
+    padding: 15px;
+    margin: 10px;
+    min-width: 250px;
+}
+
+footer .footer-sosyal .social-ikon a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+footer .footer-sosyal .social-ikon a img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .footer-sosyal .social-ikon a:hover img {
+    transform: scale(1.2);
+}
+
+footer .footer-link ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-link ul li {
+    margin: 10px 0;
+}
+
+footer .footer-link ul li a {
+    color: #bbb;
+    font-size: 16px;
+}
+
+footer .footer-link ul li a:hover {
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">MSA Yazılım</div>
+        <nav class="navbar">
+            <a href="#anasayfa">Anasayfa</a>
+            <a href="#hakkimizda">Hakkımızda</a>
+            <a href="#hizmetler">Hizmetler</a>
+            <a href="#ekip">Ekip</a>
+            <a href="iletisimm.html">İletişim</a>
+            <a href="kayıtol.html">Kayıt Ol</a>
+        </nav>
+    </header>
+
+    <section id="anasayfa" class="hero">
+        <div class="hero-icerik">
+            <h1>Yazılım Çözümleri</h1>
+            <p>İnovasyon ve teknoloji ile en iyi çözümleri sunuyoruz. Bizimle geleceğe doğru adım atın.</p>
+            <a href="kayıtol.html" class="btn">Bizimle Çalışın</a>
+        </div>
+    </section>
+
+    <!-- Hakkımızda Bölümü -->
+    <section id="hakkimizda" class="hakkında">
+        <h2>Hakkımızda</h2>
+        <div class="icerik">
+            <p>
+                Biz, yenilikçi ve kaliteli çözümler sunmayı hedefleyen bir ekibiz. 
+                Müşterilerimizin memnuniyetini önceliğimiz yapıyoruz. 
+                İnovasyon ve teknolojiyle şekillenen vizyonumuzla müşterilerimize mükemmel çözümler sunuyoruz.
+            </p>
+            <img src="../sayfa/hakkındaresim.jpg" alt="Hakkımızda Görseli">
+        </div>
+    </section>
+
+    <!-- Hizmetler Bölümü -->
+    <section id="hizmetler" class="hizmetlerr">
+        <h2>Hizmetlerimiz</h2>
+        <div class="hizmet-kartlar">
+            <div class="hizmet-kart">
+                <h3>Web Tasarımı</h3>
+                <p>Modern ve yenilikçi web tasarım hizmetleri sunuyoruz.</p>
+            </div>
+            <div class="hizmet-kart">
+                <h3>SEO Optimizasyonu</h3>
+                <p>Sitenizi arama motorlarında öne çıkarmak için buradayız.</p>
+            </div>
+            <div class="hizmet-kart">
+                <h3>Danışmanlık</h3>
+                <p>İşinizde başarılı olmanız için profesyonel destek sağlıyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ekip Bölümü -->
+    <section id="ekip" class="ekipp">
+        <h2>Ekibimiz</h2>
+        <div class="ekip-resim">
+            <div class="resim">
+                <img src="../sayfa/kız1 resim.jpg" alt="Ekip Üyesi">
+                <h4>Fatma Moda</h4>
+                <p>Kurucu</p>
+            </div>
+            <div class="resim">
+                <img src="../sayfa/erkek resim.jpg" alt="Ekip Üyesi">
+                <h4>Demir Cuma</h4>
+                <p>Tasarımcı</p>
+            </div>
+            <div class="resim">
+                <img src="../sayfa/kız2 resim.jpg" alt="Ekip Üyesi">
+                <h4>Melek Ay</h4>
+                <p>Yazılım Uzmanı</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alt Bilgi -->
+    <footer>
+        <div class="footer-baglan">
+            <div class="footer-hakkında">
+                <h3>Yazılım Şirketi</h3>
+                <p>Yazılım ve teknoloji dünyasında çözüm odaklı, yenilikçi ve kaliteli hizmetler sunuyoruz.</p>
+            </div>
+
+            <div class="footer-link">
+                <h3>Hızlı Linkler</h3>
+                <ul>
+                    <li><a href="#anasayfa" >Anasayfa</a></li>
+                    <li><a href="#hakkimizda">Hakkımızda</a></li>
+                    <li><a href="#hizmetler">Hizmetler</a></li>
+                    <li><a href="#ekip">Ekip</a></li>
+                    <li><a href="iletisimm.html">İletisim</a></li>
+                    <li><a href="kayıtol.html">Kayıt Ol</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-sosyal">
+                <h3>Bizi Takip Edin</h3>
+                <div class="social-ikon">
+                    <a href="https://www.facebook.com/melek.ay.16100921?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/melk_q0?t=-_I1VUJiw2vB8w-2geyr0A&s=09"><i class="fa-solid fa-x"></i></a>
+                    <a href="https://www.linkedin.com/in/melek-ay-4a080a296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-solid fa-link"></i></a>
+                    <a href="https://www.instagram.com/melekyy0?igsh=MWltZTZhaHRtZWNobg=="><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-alt">
+            <p>&copy; 2024 Yazılım Şirketi. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+</body>
+</html>

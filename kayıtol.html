@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        width: 20%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgb(0,0 0, 1);
+        border-radius: 8px;
+        margin-top: 50px;
+    }
+    h2{
+        text-align: center;
+        color: #333;
+    }
+    .form-group{
+        margin-bottom: 15px;
+    }
+    label{
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+        }
+    input[type="text"]
+    input[type="email"]
+    input[type="password"]
+    input[type="date"]
+    input[type="file"]
+    text,
+    select{
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    textarea{
+        resize: vertical;
+    }
+    button{
+        width: 100%;
+        padding: 10px;
+        background-color: #0056b3;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover{
+        background-color: #19406c;
+    }
+
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bizi Seçtiğiniz İçin Teşekürler</h2>
+        <form>
+            <div class="form-group">
+                <label name="name">İsim Soyad: </label >
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                <label name="sifre" >Şifre: </label>
+                <input type="password" name="sifre" id="sifre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Eposta: </label>
+                <input type="email" name="email" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Doğum Tarihi: </label >
+                <input type="date" name="date" id="type">
+            </div>
+            <div class="form-group">
+                <label for="cinsiyet">Cinsiyet: </label >
+                <select id="cinsiyet" name="cinsiyet">
+                    <option value="kadın">kadın</option>
+                    <option value="erkek" >erkek</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bio">Bizimle Çalışırken Ulaşmak İstediğiniz Hedef: </label>
+                <textarea name="bio" id="bio" rows="20" cols="20"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="bildirim">Size Nasıl Ulaşmamızı İstersiniz: </label>
+                <label><input type="radio" name="bildirim" id="bildirim" value="sms">SMS</label>
+                <label><input type="radio" name="bildirim" id="bildirim" value="emsil">Email</label>
+                <label><input type="radio" name="bildirim" id="bildirim" value="Telefon">Telefon</label>
+            </div>
+
+            <div class="form-group">
+                <label for="range">Memnuniyet: </label>
+                <input type="range" id="range" name="range" max="10" min="0">
+            </div>
+            <div class="form-group">
+                <button href="sayfadeneme.html" type="submit">gönder</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
